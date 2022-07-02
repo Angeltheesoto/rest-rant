@@ -12,34 +12,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('*', (req, res) => {
- res.status(404).send(`
- <h1>Error 404:</h1>
- <h2>Sorry the page you are looking for is not available</h2>
- `)
+ res.render('error404')
 })
 
 app.listen(process.env.PORT)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
