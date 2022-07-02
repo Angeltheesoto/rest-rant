@@ -64,3 +64,9 @@ Possible bonus ideas:
 - Update for comments
 - Aggregate rating for a place
 - Auto-complete state dropdown
+
+Color scheme:
+
+- \#087E8B - Metallic Seaweed
+- \#FF5A5F - Orange Red Crayola
+- \#3C3C3C - Onyx
