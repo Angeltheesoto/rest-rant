@@ -18,17 +18,17 @@ function new_form() {
 
     <div className='form-group'>
      <label htmlFor="city">City</label>
-     <input className='form-control' type="url" name="city" id="city" />
+     <input className='form-control' type="text" name="city" id="city" />
     </div>
 
     <div className='form-group'>
      <label htmlFor="state">State</label>
-     <input className='form-control' type="url" name="state" id="state" />
+     <input className='form-control' type="text" name="state" id="state" />
     </div>
 
     <div className='form-group'>
      <label htmlFor="cuisines">Cuisines</label>
-     <input className='form-control' type="url" name="cuisines" id="cuisines" required />
+     <input className='form-control' type="text" name="cuisines" id="cuisines" required />
     </div>
 
     <input className='btn btn-primary' type="submit" value="Add Place" />

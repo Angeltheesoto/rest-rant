@@ -1,34 +1,24 @@
 const app = require('express').Router()
-
-app.get('/', (req, res) => {
- let places = [{
-  name: 'H-Thai-ML',
-  city: 'Seattle',
-  state: 'WA',
-  cuisines: 'Thai, Pan-Asian',
-  pic: '/css/images/cat.jpg',
-  width: 500,
-  height: 500
- }, {
-  name: 'Coding Cat Cafe',
-  city: 'Phoenix',
-  state: 'AZ',
-  cuisines: 'Coffee, Bakery',
-  pic: 'https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFieSUyMGNhdHxlbnwwfHwwfHw%3D&w=1000&q=80',
-  width: 500,
-  height: 500
- }]
- res.render('places/index', { places })
-});
-
-app.post('/', (req, res) => {
-  console.log(req.body)
-  res.send('POST /places')
-});
+const place = require('../models/places.js')
 
 app.get('/new', (req, res) => {
   res.render('places/new')
 });
 
+app.post('/', (req, res) => {
+  console.log(req.body)
+  if (!req.body.pic) {
+    // Default image if one is not provided
+    req.body.pic = 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=640:*'
+  }
+  if (!req.body.city) {
+    req.body.city = 'Unknown city'
+  }
+  if (!req.body.state) {
+    req.body.state = 'Unknown state'
+  };
+  place.push(req.body)
+  res.redirect('/places')
+});
 
 module.exports = app
