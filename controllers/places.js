@@ -21,8 +21,14 @@ app.get('/', (req, res) => {
  res.render('places/index', { places })
 });
 
+app.post('/', (req, res) => {
+  console.log(req.body)
+  res.send('POST /places')
+});
+
 app.get('/new', (req, res) => {
   res.render('places/new')
 });
+
 
 module.exports = app
