@@ -73,5 +73,5 @@ Color scheme:
 
 Errors/ questions:
 
-- How to get nodemon to auto refresh when changes are made.
+- I dont understand: Activity (be-4-rest-rant-part-5) - parts 1 - 4.
 - images in home.jsx are not appearing.
