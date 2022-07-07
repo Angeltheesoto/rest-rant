@@ -12,3 +12,11 @@ h1 {
  width: 100vw;
  height: auto;
 }
+
+form {
+ margin: 0 1rem;
+}
+
+.form-group {
+ margin-bottom: 1rem;
+}
