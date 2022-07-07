@@ -1,4 +1,14 @@
+
+body {
+ margin: 1rem 0;
+}
+
 h1 {
  text-align: center;
  color: red;
+}
+
+.home-banner {
+ width: 100vw;
+ height: auto;
 }

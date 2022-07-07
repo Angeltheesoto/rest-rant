@@ -70,3 +70,8 @@ Color scheme:
 - \#087E8B - Metallic Seaweed
 - \#FF5A5F - Orange Red Crayola
 - \#3C3C3C - Onyx
+
+Errors/ questions:
+
+- How to get nodemon to auto refresh when changes are made.
+- images in home.jsx are not appearing.
