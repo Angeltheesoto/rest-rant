@@ -1,4 +1,3 @@
-
 module.exports = [{
   name: 'H-Thai-ML',
   city: 'Seattle',
@@ -7,7 +6,8 @@ module.exports = [{
   pic: '/css/images/cat.jpg',
   width: 500,
   height: 500
- }, {
+ },
+ {
   name: 'Coding Cat Cafe',
   city: 'Phoenix',
   state: 'AZ',
