@@ -1,6 +1,7 @@
 const app = require('express').Router()
 const places = require('../models/places.js')
 
+// FIRST ROUTE
 app.get('/', (req, res) => {
   res.render('places/index', { places })
 })
@@ -8,6 +9,20 @@ app.get('/', (req, res) => {
 app.get('/new', (req, res) => {
   res.render('places/new')
 });
+
+// EDIT
+app.get('/:id/edit', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+      res.render('error404')
+  }
+  else if (!places[id]) {
+      res.render('error404')
+  }
+  else {
+    res.render('places/edit', { place: places[id], id })
+  }
+})
 
 // SHOW PAGE
 app.get('/:id', (req, res) => {
@@ -22,6 +37,33 @@ app.get('/:id', (req, res) => {
     res.render('places/show', { place: places[id], id})
   }
 })
+
+// PUT ROUTE
+app.put("/:id", (req, res) => {
+  console.log(req.body);
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!places[req.params.id]) {
+    res.render("error404");
+  } else {
+    //Check for req.body having valid data
+    if (!req.body.pic) {
+      req.body.pic = "/images/squat.jpg";
+    }
+
+    if (!req.body.city) {
+      req.body.city = "Yourmomshouse";
+    }
+
+    if (!req.body.state) {
+      req.body.state = "lmao";
+    }
+
+    places[id] = req.body;
+    res.redirect(`/places/${id}`);
+  }
+});
 
 app.post('/', (req, res) => {
   // Default info if nothing is input
@@ -38,19 +80,7 @@ app.post('/', (req, res) => {
   res.redirect('/places')
 });
 
-// EDIT
-app.get('/:id/edit', (req, res) => {
-  let id = Number(req.params.id)
-  if (isNaN(id)) {
-      res.render('error404')
-  }
-  else if (!places[id]) {
-      res.render('error404')
-  }
-  else {
-    res.render('places/edit', { place: places[id] })
-  }
-})
+
 
 
 //DELETE
