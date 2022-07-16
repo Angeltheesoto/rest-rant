@@ -1,22 +1,62 @@
 
 body {
- margin: 1rem 0;
+ padding: 1rem;
 }
 
 h1 {
  text-align: center;
- color: red;
+ color: #1e1e1e;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-weight: bolder;
+ margin-bottom: 2rem;
+ margin-top: -10px;
+}
+
+.banner-container {
+ min-width: 10rem;
+ max-width: 70rem;
+ height: auto;
+ margin: 0 auto;
+ padding-bottom: 1rem;
 }
 
 .home-banner {
- width: 100vw;
+ width: 100%;
  height: auto;
 }
 
+.form-container {
+ margin: 0 auto;
+ max-width: 60rem;
+}
+
 form {
- margin: 0 1rem;
+ margin: 2rem 1rem;
 }
 
 .form-group {
  margin-bottom: 1rem;
+}
+
+.pageLinks {
+ color: #1e1e1e;
+ font-size: 1rem;
+ padding: 10px 16px;
+ border: 1px solid #1e1e1e;
+ background-color: transparent;
+ text-decoration: none;
+ border-radius: 5px;
+}
+
+.pageLinks:hover {
+ color: #1e1e1e;
+ border: 1px solid #494949;
+}
+
+.homePage {
+ position: absolute;
+}
+
+img {
+ border-radius: 5px;
 }

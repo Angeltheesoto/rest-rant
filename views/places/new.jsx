@@ -5,6 +5,8 @@ function new_form() {
  return (
   <Def>
    <h1>Add a New Place</h1>
+   <hr />
+   <div className='form-container'>
    <form method='POST' action="/places">
     <div className='form-group'>
      <label htmlFor="name">Place name</label>
@@ -30,10 +32,13 @@ function new_form() {
      <label htmlFor="cuisines">Cuisines</label>
      <input className='form-control' type="text" name="cuisines" id="cuisines" required />
     </div>
-
     <input className='btn btn-primary' type="submit" value="Add Place" />
 
    </form>
+   </div>
+    <p><a href="/places" className='pageLinks'>Places Page</a></p>
+
+
   </Def>
  )
 }

@@ -11,7 +11,8 @@ function Def (html) {
    </head>
    <body>
     {/* mycode */}
-    <p><a href="/">Home Page</a></p>
+    <p><a href="/" className='pageLinks homePage'>Home Page</a></p>
+
 
     {html.children}
    </body>
