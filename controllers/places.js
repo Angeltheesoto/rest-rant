@@ -1,20 +1,15 @@
 const app = require('express').Router()
-const place = require('../models/places.js')
+const places = require('../models/places.js')
 
-app.get('/places', (req, res) => {
-  res.render('places/index', {place})
+app.get('/', (req, res) => {
+  res.render('places/index', { places })
 })
 
 app.get('/new', (req, res) => {
   res.render('places/new')
 });
 
-// app.get('/', (req, res) => {
-//   res.render('/places')
-// })
-
 app.post('/', (req, res) => {
-  console.log(req.body)
   // Default info if nothing is input
   if (!req.body.pic) {
     req.body.pic = 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=640:*'
@@ -25,8 +20,23 @@ app.post('/', (req, res) => {
   if (!req.body.state) {
     req.body.state = 'Unknown state'
   };
-  place.push(req.body)
+  places.push(req.body)
   res.redirect('/places')
+});
+
+//DELETE
+//prettier-ignore
+app.delete('/:id', (req, res) => {
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!places[id]) {
+    res.render("error404");
+  } else {
+    places.splice(id, 1);
+    //prettier-ignore
+    res.status(303).redirect('/places');
+  }
 });
 
 module.exports = app
