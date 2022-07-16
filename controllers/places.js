@@ -9,6 +9,20 @@ app.get('/new', (req, res) => {
   res.render('places/new')
 });
 
+// SHOW PAGE
+app.get('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    res.render('places/show', { place: places[id], id})
+  }
+})
+
 app.post('/', (req, res) => {
   // Default info if nothing is input
   if (!req.body.pic) {
