@@ -69,3 +69,12 @@ nav a:hover {
  color: aliceblue;
  font-weight: bold;
 }
+
+.showPage {
+ font-size: 2rem;
+ text-align: center;
+}
+
+.paddingShow {
+ padding-top: 10rem;
+}
