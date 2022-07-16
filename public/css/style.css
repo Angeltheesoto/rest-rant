@@ -38,25 +38,34 @@ form {
  margin-bottom: 1rem;
 }
 
-.pageLinks {
- color: #1e1e1e;
- font-size: 1rem;
- padding: 10px 16px;
- border: 1px solid #1e1e1e;
- background-color: transparent;
- text-decoration: none;
- border-radius: 5px;
-}
-
-.pageLinks:hover {
- color: #1e1e1e;
- border: 1px solid #494949;
-}
-
-.homePage {
- position: absolute;
-}
-
 img {
  border-radius: 5px;
+}
+
+nav {
+ background-color: dimgrey;
+ padding: 10px;
+ margin-bottom: 2rem;
+ border-radius: 5px;
+}
+
+nav ul {
+ list-style-type: none;
+ margin: 0;
+}
+
+nav li {
+ display: inline;
+ margin-right: 25px;
+}
+
+nav a {
+ color: white;
+ font-size: 1.5em;
+ text-decoration: none;
+}
+
+nav a:hover {
+ color: aliceblue;
+ font-weight: bold;
 }

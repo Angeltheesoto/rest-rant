@@ -14,9 +14,6 @@ function home () {
       Photo by <a href="AUTHOR_LINK">JIMMY DEAN</a> on <a href="https://unsplash.com/photos/Yn0l7uwBrpw">Unsplash</a>
      </div>
     </div>
-    <a href="/places">
-     <button className='pageLinks'>Places Page</button>
-    </a>
    </main>
   </Def>
  )

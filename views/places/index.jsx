@@ -29,7 +29,6 @@ function index(data) {
    {placesFormatted}
    </div>
   </main>
-    <p><a href="/places/new" className='pageLinks'>New Page</a></p>
  </Def>
  )
 }

@@ -36,8 +36,6 @@ function new_form() {
 
    </form>
    </div>
-    <p><a href="/places" className='pageLinks'>Places Page</a></p>
-
 
   </Def>
  )

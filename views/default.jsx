@@ -10,10 +10,13 @@ function Def (html) {
     <link rel="stylesheet" href="/css/style.css" />
    </head>
    <body>
-    {/* mycode */}
-    <p><a href="/" className='pageLinks homePage'>Home Page</a></p>
-
-
+    <nav>
+     <ul>
+      <li><a href="/" className='pageLinks'>Home</a></li>
+      <li><a href="/places" className='pageLinks'>Places</a></li>
+      <li><a href="/places/new" className='pageLinks'>Add Place</a></li>
+     </ul>
+    </nav>    
     {html.children}
    </body>
   </html>
