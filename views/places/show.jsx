@@ -14,7 +14,14 @@ function show (data) {
             </div>
             <div className='col-sm-6 paddingShow'>
              <p className='showPage'>{data.place.cuisines}</p>
-             <p className='showPage'>Located in {data.place.city}, {data.place.state}</p>
+             <h3 className='showPage'>Located in {data.place.city}, {data.place.state}</h3>
+             <h2>Description</h2>
+             <h3>
+              {data.place.showEstablished()}
+             </h3>
+             <h4>
+              Serving {data.place.cuisines}
+             </h4>
             </div>
             </div>
             </div>
