@@ -16,10 +16,7 @@ app.get('/', (req, res) => {
 
 // POST ROUTE (update places after edit form)
 app.post('/', (req, res) => {
-  // Default info if nothing is input
-  if (!req.body.pic) {
-    req.body.pic = 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=640:*'
-  }
+
   if (!req.body.city) {
     req.body.city = 'Unknown city'
   }
@@ -62,9 +59,9 @@ app.put('/:id', (req, res) => {
 })
 
 // DELETE rants
-app.delete('/:id', (req, res) => {
-  res.send('DELETE /places/:id stub')
-})
+// app.delete('/:id', (req, res) => {
+//   res.send('DELETE /places/:id stub')
+// })
 
 // EDIT rants
 app.get('/:id/edit', (req, res) => {
